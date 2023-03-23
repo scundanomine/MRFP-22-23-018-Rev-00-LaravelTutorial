@@ -16,3 +16,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/view', function () {
+    echo "I am into the view!";
+});
+
+Route::post('/desert', function () {
+    echo "I have just made post request!";
+});
+
+Route::get('/viewId/{id?}', function ($id=null) {
+    echo "I get the id! $id";
+});
